@@ -11,3 +11,4 @@ Pillow
 google-generativeai
 joblib
 glob2
+libgl1
