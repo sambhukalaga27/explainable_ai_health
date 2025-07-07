@@ -14,7 +14,8 @@ import google.generativeai as genai
 import os
 
 # ----------- GOOGLE GEMINI SETUP ------------
-genai.configure(api_key="")
+geminiapi_key = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=geminiapi_key)
 
 def explain_with_gemini(prompt):
     model = genai.GenerativeModel("gemini-2.5-flash")
