@@ -5,7 +5,7 @@ pandas
 scikit-learn
 matplotlib
 opencv-python
-streamlit
+streamlit==1.46.1
 shap
 Pillow
 google-generativeai
