@@ -231,7 +231,7 @@ with tab_heart:
                 logits1    = model_out["logits1"]
                 pred       = logits1.argmax(1).item()
                 prob       = torch.softmax(logits1, dim=1)[0, pred].item()
-                pred_label = "Heart Disease" if pred == 1 else "Healthy"
+                pred_label = "Healthy" if pred == 1 else "Heart Disease"
 
                 # -- SHAP --
                 _, val_loader, _, _, _ = load_tabular_data("data/tabular/heart.csv")
@@ -265,7 +265,7 @@ with tab_heart:
         inp_ordered= r["inp_ordered"]
         model_out  = r["model_out"]
 
-        color = "🔴" if r["pred"] == 1 else "🟢"
+        color = "🔴" if r["pred"] == 0 else "🟢"
         st.markdown(
             f"<h3 style='text-align:center;'>{color} {pred_label} — "
             f"{prob:.1%} confidence</h3>",
