@@ -1,0 +1,24 @@
+# Environment
+.env
+
+# Virtual environments
+explainai_env/
+venv/
+env/
+.venv/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+__pycache__/
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data (large files - uncomment if you don't want to track them)
+# data/
+# models/
