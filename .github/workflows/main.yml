@@ -30,7 +30,7 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Run Streamlit App
+    - name: Validate app syntax
       run: |
-        echo "GEMINI_API_KEY is set."
-        streamlit run app.py
+        python -c "import ast, sys; ast.parse(open('app.py').read()); print('app.py syntax OK')"
+        python -c "import streamlit, torch, cv2, shap, pandas, numpy; print('All imports OK')"
