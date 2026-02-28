@@ -190,6 +190,6 @@ def train_tabular(epochs: int = 100, lam: float = 0.5, alpha: float = 5.0):
 
 
 if __name__ == "__main__":
-    # train_cnn()
+    train_cnn()
     train_tabular(epochs=300)
 
